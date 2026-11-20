@@ -1,0 +1,856 @@
+:root {
+    --bg-page: #090d16;
+    --bg-glow: rgba(99, 102, 241, 0.16);
+    --bg-surface: #111827;
+    --bg-input: #0f172a;
+    --bg-addon: #0b1120;
+    --bg-disabled: #1e293b;
+
+    --text-main: #f8fafc;
+    --text-label: #e2e8f0;
+    --text-muted: #94a3b8;
+    --text-placeholder: #64748b;
+    --text-disabled: #64748b;
+
+    --border-color: #1e293b;
+    --border-control: #263244;
+
+    --accent-primary: #6366f1;
+    --accent-primary-hover: #4f46e5;
+    --accent-soft: rgba(99, 102, 241, 0.16);
+    --accent-text: #818cf8;
+    --accent-icon-active: #a5b4fc;
+    --accent-border: rgba(129, 140, 248, 0.3);
+    --focus-ring: rgba(99, 102, 241, 0.25);
+}
+
+/* Navbar Start  */
+
+.navbar-wrapper {
+    z-index: 1040;
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 8px 24px -12px rgba(0, 0, 0, 0.65);
+}
+
+.navbar-brand-badge {
+    width: 38px;
+    height: 38px;
+    background-color: var(--accent-soft);
+    color: var(--accent-text);
+    border: 1px solid var(--accent-border);
+}
+
+.navbar-brand-text {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+}
+
+.navbar-brand-link:hover .navbar-brand-text {
+    color: var(--accent-icon-active);
+}
+
+.navbar-profile-btn {
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-addon);
+    color: var(--text-label);
+    border: 1px solid var(--border-control);
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.navbar-profile-btn:hover,
+.navbar-profile-btn[aria-expanded="true"] {
+    background-color: var(--accent-soft);
+    border-color: var(--accent-primary);
+    color: var(--accent-icon-active);
+    box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.navbar-dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    min-width: 190px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-control);
+    box-shadow: 0 18px 36px -12px rgba(0, 0, 0, 0.85);
+}
+
+.navbar-dropdown-header {
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0.25rem;
+}
+
+.navbar-dropdown-item {
+    background-color: transparent;
+    color: var(--text-label);
+    border: none;
+    text-align: left;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.navbar-dropdown-item:hover {
+    background-color: var(--accent-soft);
+    color: var(--accent-icon-active);
+}
+
+.navbar-dropdown-item--danger {
+    color: #f87171;
+}
+
+.navbar-dropdown-item--danger:hover {
+    background-color: rgba(239, 68, 68, 0.14);
+    color: #fecaca;
+}
+
+/* Navbar End */
+
+/* Landing Start  */
+
+.landing-wrapper {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, var(--bg-glow), transparent 55%),
+        var(--bg-page);
+    color: var(--text-main);
+}
+
+.landing-card {
+    max-width: 620px;
+    width: 100%;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.75);
+}
+
+.landing-pill {
+    background-color: var(--accent-soft);
+    color: var(--accent-text);
+    border: 1px solid var(--accent-border);
+    letter-spacing: 0.04em;
+}
+
+.landing-title {
+    color: var(--text-main);
+}
+
+.landing-subtitle {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.landing-btn {
+    transition: transform 0.15s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.landing-btn--primary {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    border: 1px solid var(--accent-primary);
+    box-shadow: 0 12px 24px -8px rgba(99, 102, 241, 0.55);
+}
+
+.landing-btn--primary:hover {
+    background-color: var(--accent-primary-hover);
+    border-color: var(--accent-primary-hover);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.landing-btn--secondary {
+    background-color: var(--bg-addon);
+    color: var(--text-main);
+    border: 1px solid var(--border-control);
+}
+
+.landing-btn--secondary:hover {
+    background-color: var(--bg-input);
+    border-color: var(--accent-primary);
+    color: var(--accent-icon-active);
+    transform: translateY(-1px);
+}
+
+/* Landing End */
+
+/* Login Start */
+
+.login-wrapper {
+    min-height: calc(100vh);
+    width: 100%;
+    background:
+        radial-gradient(circle at top, var(--bg-glow), transparent 55%),
+        var(--bg-page);
+    color: var(--text-main);
+}
+
+.login-header {
+    letter-spacing: -0.01em;
+}
+
+.login-badge {
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent-soft);
+    color: var(--accent-text);
+    border: 1px solid var(--accent-border);
+    box-shadow: 0 10px 24px -8px rgba(79, 70, 229, 0.45);
+}
+
+.login-title {
+    color: var(--text-main);
+}
+
+.login-subtitle {
+    color: var(--text-muted);
+}
+
+.login-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.75);
+}
+
+.login-label {
+    color: var(--text-label);
+}
+
+.login-input-group {
+    border-radius: 0.65rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.login-input-group:focus-within {
+    box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.login-addon {
+    background-color: var(--bg-addon);
+    border: 1px solid var(--border-control);
+    border-right: none;
+    border-top-left-radius: 0.65rem;
+    border-bottom-left-radius: 0.65rem;
+    color: var(--text-muted);
+    transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.login-input {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-control);
+    border-left: none;
+    border-top-right-radius: 0.65rem;
+    border-bottom-right-radius: 0.65rem;
+    color: var(--text-main);
+    padding: 0.78rem 1rem;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.login-input::placeholder {
+    color: var(--text-placeholder);
+}
+
+.login-input-group:focus-within .login-addon,
+.login-input-group:focus-within .login-input {
+    border-color: var(--accent-primary);
+}
+
+.login-input-group:focus-within .login-addon {
+    background-color: var(--accent-soft);
+    color: var(--accent-icon-active);
+}
+
+.login-input:focus {
+    background-color: var(--bg-input);
+    color: var(--text-main);
+    box-shadow: none;
+}
+
+.login-submit {
+    transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-submit--enabled {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    border: 1px solid var(--accent-primary);
+    box-shadow: 0 12px 24px -8px rgba(99, 102, 241, 0.55);
+}
+
+.login-submit--enabled:hover {
+    background-color: var(--accent-primary-hover);
+    border-color: var(--accent-primary-hover);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.login-submit--enabled:active {
+    transform: translateY(0);
+}
+
+.login-submit--disabled {
+    background-color: var(--bg-disabled);
+    color: var(--text-disabled);
+    border: 1px solid var(--border-control);
+    cursor: not-allowed;
+}
+
+.login-footer {
+    border-top: 1px solid var(--border-color);
+}
+
+.login-footer-text {
+    color: var(--text-muted);
+}
+
+.login-register-link {
+    color: var(--accent-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.login-register-link:hover {
+    color: var(--accent-icon-active);
+    text-decoration: underline;
+}
+
+/* Login End */
+
+/* Register Start */
+
+.register-wrapper {
+    min-height: calc(100vh);
+    width: 100%;
+    background:
+        radial-gradient(circle at top, var(--bg-glow), transparent 55%),
+        var(--bg-page);
+    color: var(--text-main);
+}
+
+.register-header {
+    letter-spacing: -0.01em;
+}
+
+.register-badge {
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent-soft);
+    color: var(--accent-text);
+    border: 1px solid var(--accent-border);
+    box-shadow: 0 10px 24px -8px rgba(79, 70, 229, 0.45);
+}
+
+.register-title {
+    color: var(--text-main);
+}
+
+.register-subtitle {
+    color: var(--text-muted);
+}
+
+.register-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.75);
+}
+
+.register-label {
+    color: var(--text-label);
+}
+
+.register-input-group {
+    border-radius: 0.65rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.register-input-group:focus-within {
+    box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.register-addon {
+    background-color: var(--bg-addon);
+    border: 1px solid var(--border-control);
+    border-right: none;
+    border-top-left-radius: 0.65rem;
+    border-bottom-left-radius: 0.65rem;
+    color: var(--text-muted);
+    transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.register-input {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-control);
+    border-left: none;
+    border-top-right-radius: 0.65rem;
+    border-bottom-right-radius: 0.65rem;
+    color: var(--text-main);
+    padding: 0.78rem 1rem;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.register-input::placeholder {
+    color: var(--text-placeholder);
+}
+
+.register-input-group:focus-within .register-addon,
+.register-input-group:focus-within .register-input {
+    border-color: var(--accent-primary);
+}
+
+.register-input-group:focus-within .register-addon {
+    background-color: var(--accent-soft);
+    color: var(--accent-icon-active);
+}
+
+.register-input:focus {
+    background-color: var(--bg-input);
+    color: var(--text-main);
+    box-shadow: none;
+}
+
+.register-submit {
+    transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.register-submit--enabled {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    border: 1px solid var(--accent-primary);
+    box-shadow: 0 12px 24px -8px rgba(99, 102, 241, 0.55);
+}
+
+.register-submit--enabled:hover {
+    background-color: var(--accent-primary-hover);
+    border-color: var(--accent-primary-hover);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.register-submit--enabled:active {
+    transform: translateY(0);
+}
+
+.register-submit--disabled {
+    background-color: var(--bg-disabled);
+    color: var(--text-disabled);
+    border: 1px solid var(--border-control);
+    cursor: not-allowed;
+}
+
+.register-footer {
+    border-top: 1px solid var(--border-color);
+}
+
+.register-footer-text {
+    color: var(--text-muted);
+}
+
+.register-login-link {
+    color: var(--accent-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.register-login-link:hover {
+    color: var(--accent-icon-active);
+    text-decoration: underline;
+}
+
+/* Register End */
+
+/* Workout Start */
+
+.workout-wrapper {
+    min-height: calc(100vh - 72px);
+    width: 100%;
+    background:
+        radial-gradient(circle at top, var(--bg-glow), transparent 55%),
+        var(--bg-page);
+    color: var(--text-main);
+}
+
+.workout-header {
+    letter-spacing: -0.01em;
+}
+
+.workout-badge,
+.workout-empty-icon {
+    width: 52px;
+    height: 52px;
+    background-color: var(--accent-soft);
+    color: var(--accent-text);
+    border: 1px solid var(--accent-border);
+    box-shadow: 0 10px 24px -8px rgba(79, 70, 229, 0.45);
+}
+
+.workout-title {
+    color: var(--text-main);
+}
+
+.workout-subtitle {
+    color: var(--text-muted);
+}
+
+.workout-spinner {
+    color: var(--accent-text);
+}
+
+.workout-toolbar {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 12px 28px -14px rgba(0, 0, 0, 0.65);
+}
+
+.workout-input--compact {
+    padding: 0.58rem 0.9rem;
+    font-size: 0.9rem;
+}
+
+.workout-clear-btn {
+    background-color: var(--bg-input);
+    color: var(--text-muted);
+    border: 1px solid var(--border-control);
+    border-left: none;
+    border-top-right-radius: 0.65rem;
+    border-bottom-right-radius: 0.65rem;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.workout-clear-btn:hover {
+    color: var(--text-main);
+    background-color: var(--bg-addon);
+}
+
+.workout-filter-group {
+    background-color: var(--bg-addon);
+    border: 1px solid var(--border-control);
+}
+
+.workout-filter-btn {
+    background-color: transparent;
+    color: var(--text-muted);
+    border: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.workout-filter-btn:hover {
+    color: var(--text-main);
+}
+
+.workout-filter-btn--active {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+}
+
+.workout-table-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.75);
+}
+
+.workout-table {
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--text-main);
+    --bs-table-border-color: var(--border-color);
+    color: var(--text-main);
+}
+
+.workout-th {
+    background-color: var(--bg-addon);
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border-control);
+}
+
+.workout-tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.15s ease;
+}
+
+.workout-tr:last-child {
+    border-bottom: none;
+}
+
+.workout-tr:hover {
+    background-color: rgba(99, 102, 241, 0.05);
+}
+
+.workout-tr--completed {
+    background-color: rgba(34, 197, 94, 0.03);
+}
+
+.workout-td {
+    border-color: var(--border-color);
+}
+
+.workout-item-title {
+    color: var(--text-main);
+}
+
+.workout-item-title--completed {
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+.workout-duration-pill {
+    background-color: var(--accent-soft);
+    color: var(--accent-icon-active);
+    border: 1px solid var(--accent-border);
+    white-space: nowrap;
+}
+
+.workout-status-badge {
+    white-space: nowrap;
+}
+
+.workout-status-badge--pending {
+    background-color: var(--bg-addon);
+    color: var(--text-muted);
+    border: 1px solid var(--border-control);
+}
+
+.workout-status-badge--done {
+    background-color: rgba(34, 197, 94, 0.14);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+.workout-btn {
+    white-space: nowrap;
+    transition: transform 0.15s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.workout-btn:active {
+    transform: scale(0.98);
+}
+
+.workout-btn--primary {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    border: 1px solid var(--accent-primary);
+    box-shadow: 0 12px 24px -8px rgba(99, 102, 241, 0.55);
+}
+
+.workout-btn--primary:hover:not(:disabled) {
+    background-color: var(--accent-primary-hover);
+    border-color: var(--accent-primary-hover);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.workout-btn--disabled,
+.workout-btn--primary:disabled {
+    background-color: var(--bg-disabled);
+    color: var(--text-disabled);
+    border: 1px solid var(--border-control);
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.workout-btn--complete {
+    background-color: rgba(34, 197, 94, 0.12);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.28);
+}
+
+.workout-btn--complete:hover:not(:disabled) {
+    background-color: rgba(34, 197, 94, 0.22);
+    border-color: rgba(74, 222, 128, 0.5);
+    color: #bbf7d0;
+}
+
+.workout-btn--complete-active {
+    background-color: rgba(34, 197, 94, 0.2);
+    color: #86efac;
+    border: 1px solid rgba(74, 222, 128, 0.45);
+}
+
+.workout-btn--complete-active:hover:not(:disabled) {
+    background-color: var(--bg-addon);
+    border-color: var(--border-control);
+    color: var(--text-label);
+}
+
+.workout-btn--ghost {
+    background-color: var(--bg-addon);
+    color: var(--text-label);
+    border: 1px solid var(--border-control);
+}
+
+.workout-btn--ghost:hover {
+    background-color: var(--bg-input);
+    border-color: var(--accent-primary);
+    color: var(--text-main);
+}
+
+.workout-btn--danger {
+    background-color: rgba(239, 68, 68, 0.12);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.28);
+}
+
+.workout-btn--danger:hover:not(:disabled) {
+    background-color: rgba(239, 68, 68, 0.22);
+    border-color: rgba(248, 113, 113, 0.5);
+    color: #fecaca;
+}
+
+/* Pagination */
+.workout-pagination {
+    background-color: var(--bg-addon);
+    border-top: 1px solid var(--border-color);
+}
+
+.workout-page-btn,
+.workout-page-num {
+    background-color: var(--bg-input);
+    color: var(--text-label);
+    border: 1px solid var(--border-control);
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.workout-page-num {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+}
+
+.workout-page-btn:hover:not(:disabled),
+.workout-page-num:hover:not(.workout-page-num--active) {
+    background-color: var(--bg-surface);
+    border-color: var(--accent-primary);
+    color: var(--text-main);
+}
+
+.workout-page-num--active {
+    background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: #ffffff;
+}
+
+.workout-page-btn:disabled {
+    background-color: var(--bg-disabled);
+    color: var(--text-disabled);
+    border-color: var(--border-control);
+    cursor: not-allowed;
+}
+
+/* Modal */
+.workout-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    background-color: rgba(2, 6, 23, 0.78);
+    backdrop-filter: blur(4px);
+}
+
+.workout-modal {
+    max-width: 480px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.85);
+}
+
+.workout-close-btn {
+    width: 36px;
+    height: 36px;
+    background-color: var(--bg-addon);
+    color: var(--text-muted);
+    border: 1px solid var(--border-control);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.workout-close-btn:hover {
+    background-color: var(--accent-soft);
+    color: var(--text-main);
+}
+
+.workout-label {
+    color: var(--text-label);
+}
+
+.workout-input-group {
+    border-radius: 0.65rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.workout-input-group:focus-within {
+    box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.workout-addon {
+    background-color: var(--bg-addon);
+    border: 1px solid var(--border-control);
+    border-right: none;
+    border-top-left-radius: 0.65rem;
+    border-bottom-left-radius: 0.65rem;
+    color: var(--text-muted);
+    transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.workout-input {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-control);
+    border-left: none;
+    border-top-right-radius: 0.65rem;
+    border-bottom-right-radius: 0.65rem;
+    color: var(--text-main);
+    padding: 0.78rem 1rem;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.workout-input::placeholder {
+    color: var(--text-placeholder);
+}
+
+.workout-input-group:focus-within .workout-addon,
+.workout-input-group:focus-within .workout-input {
+    border-color: var(--accent-primary);
+}
+
+.workout-input-group:focus-within .workout-addon {
+    background-color: var(--accent-soft);
+    color: var(--accent-icon-active);
+}
+
+.workout-input:focus {
+    background-color: var(--bg-input);
+    color: var(--text-main);
+    box-shadow: none;
+}
+
+/* Workout End */
+
+/* Footer Start */
+
+.footer-wrapper {
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+}
+
+.footer-badge {
+    width: 28px;
+    height: 28px;
+    background-color: var(--accent-soft);
+    color: var(--accent-text);
+    border: 1px solid var(--accent-border);
+}
+
+.footer-brand {
+    color: var(--text-label);
+}
+
+.footer-copy {
+    color: var(--text-muted);
+}
+
+/* Footer End */
+
